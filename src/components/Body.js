@@ -9,7 +9,7 @@ class Body extends Component {
         return news.map(onenew => {
             return (
                 <div className="col-md-6 col-xs-12 newsFrame">
-                    <img src={onenew.urlToImage} className="newImg img-responsive" />
+                    <img src={onenew.urlToImage} alt={onenew.title} className="newImg img-responsive" />
                     <h4 className="newTitle"><a href={onenew.url}>{onenew.title}</a></h4>
                     <p className="newAuthor">{onenew.author}</p>
 
@@ -19,7 +19,6 @@ class Body extends Component {
     }
 
     render() {
-        console.log(this.props.news);
         if(this.props.news.length === 0){
             return (
                 <div >

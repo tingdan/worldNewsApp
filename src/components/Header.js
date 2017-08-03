@@ -20,12 +20,12 @@ class Header extends React.Component {
     }
 
     render() {
-        console.log(this.props.currentAgency);
         return (
             <div>
                 <Dock position="top" isVisible={this.state.isVisible}>
                     <h3>Select News Agency</h3>
                     <img className="agency-small-logo"
+                        alt="bbc"
                         src="./images/bbc.png"
                         onClick={() => {
                             this.props.onChangeNews("bbc-news");
@@ -34,6 +34,7 @@ class Header extends React.Component {
                         }
                     }/>
                     <img className="agency-small-logo"
+                        alt="cnn"
                         src="./images/cnn.png"
                         onClick={() => {
                             this.props.onChangeNews("cnn");
@@ -43,6 +44,7 @@ class Header extends React.Component {
                     }
                     />
                     <img className="agency-small-logo"
+                        alt="espn"
                         src="./images/espn.png"
                         onClick={() => {
                             this.props.onChangeNews("espn");
@@ -52,6 +54,7 @@ class Header extends React.Component {
                     }/>
 
                     <img className="agency-small-logo"
+                        alt="four-four-two"
                         src="./images/four-four-two.png"
                         onClick={() => {
                             this.props.onChangeNews("four-four-two");
@@ -61,6 +64,7 @@ class Header extends React.Component {
                     }/>
 
                     <img className="agency-small-logo"
+                        alt="the-new-york-times"
                         src="./images/the-new-york-times.png"
                         onClick={() => {
                             this.props.onChangeNews("the-new-york-times");
@@ -70,6 +74,7 @@ class Header extends React.Component {
                     }/>
 
                     <img className="agency-small-logo"
+                        alt="reuters"
                         src="./images/reuters.png"
                         onClick={() => {
                             this.props.onChangeNews("reuters");
@@ -86,7 +91,7 @@ class Header extends React.Component {
 
 
                 </Dock>
-                <img className="img-responsive" style={{height:"140px", width:"60%", margin:'auto'}} src={this.props.currentAgency.imgLogo}/>
+                <img className="img-responsive" style={{height:"140px", width:"60%", margin:'auto'}} src={this.props.currentAgency.imgLogo} alt={this.props.currentAgency.name}/>
                 <br /><br />
                 <button className="btn btn-default" onClick={() => this.setState({ isVisible: !this.state.isVisible})}>
                     <FaNewspaperO size={30}/> Choose News AGENCY
